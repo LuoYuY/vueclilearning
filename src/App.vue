@@ -3,7 +3,7 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-    <p>{{ greeting() }}</p>
+<!--    <p>{{ greeting() }}</p>-->
 
   </div>
 </template>
@@ -14,14 +14,14 @@
 export default {
   data () { // = data: function() {
     return {
-      title:'your first vue file'
+      title:'LYY App'
     }
   },
   methods: {
-    greeting:function () {
-      return 'HELLO :)';
-
-    }
+    // greeting:function () {
+    //   return 'HELLO :)';
+    //
+    // }
   }
 }
 </script>
