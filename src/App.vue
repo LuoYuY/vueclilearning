@@ -3,18 +3,22 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
+
 <!--    <p>{{ greeting() }}</p>-->
 
   </div>
 </template>
 
 <script>
-
+import LuoYuY from "./LuoYuY";
 //  the component's name
 export default {
+  components:{
+    'LuoYuY':LuoYuY
+  },
   data () { // = data: function() {
     return {
-      title:'LYY App'
+      title:'LuoYuY APP'
     }
   },
   methods: {
