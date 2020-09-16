@@ -2,7 +2,6 @@
 <ul>
   <li v-for="name in names">{{ name }}</li>
 
-  </li>
 </ul>
 </template>
 
