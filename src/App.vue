@@ -4,7 +4,7 @@ a component with data-->
   <div>
 <!--    use v-on:EventName to listen to the event-->
 <!--    use $event to get the data in the event -->
-    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
+    <app-header v-bind:title="title" ></app-header>
     <!--    now 'users'has became a property-->
     <app-lyy v-bind:users="users"></app-lyy>
     <app-footer v-bind:title="title"></app-footer>

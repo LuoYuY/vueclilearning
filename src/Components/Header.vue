@@ -5,7 +5,7 @@
 </template>
 
 <script>
-
+  import {bus} from '../main'
   export default {
     props:{
       title:{
@@ -21,13 +21,9 @@
     },
     methods: {
       changeTitle: function () {
-        //this.title = 'Clarabe'; //only update 'title' in this component object
-
-        //use event to change title in the root component(where the data exactly comes from)
-        //to use event : $emit
-        //$emit('event name','data you wanna transfer')
-        //listen this event in the root component
-        this.$emit('changeTitle','Clarabe');
+       //emit event to the bus
+        this.title = 'LuminousClara';
+        bus.$emit('changeTitle','Clarabe');
 
       }
     }
