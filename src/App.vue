@@ -1,8 +1,12 @@
 //a vue file : a component ([component's name] and [html codes])
 //a vue file is just an extension of a component
+//App.vue is the root component
+
 <template>
   <div>
     <h1>{{ title }}</h1>
+<!--    use 'LuoYuY' -->
+    <LuoYuY></LuoYuY>
 <!--    <p>{{ greeting() }}</p>-->
 
   </div>
@@ -18,10 +22,6 @@ export default {
     }
   },
   methods: {
-    // greeting:function () {
-    //   return 'HELLO :)';
-    //
-    // }
   }
 }
 </script>
