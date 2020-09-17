@@ -2,10 +2,6 @@
 //a vue file is just an extension of a component
 
 
-
-
-//1.register the component to use (Globally )
-
 <template>
   <div>
     <h1>{{ title }}</h1>
@@ -26,10 +22,6 @@ export default {
     }
   },
   methods: {
-    // greeting:function () {
-    //   return 'HELLO :)';
-    //
-    // }
   }
 }
 </script>

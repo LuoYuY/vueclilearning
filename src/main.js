@@ -4,8 +4,9 @@ import App from './App.vue'
 
 import LuoYuY from "./LuoYuY"
 
-//1.register the component to use (globally}
 
+
+//register the component to use (Globally )
 Vue.component('LuoYuY',LuoYuY);
 new Vue({
   el: '#app',
