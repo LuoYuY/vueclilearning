@@ -6,7 +6,6 @@
 
 <script>
     export default {
-      name: "LuoYuY",
       data() {
         return{
           names:['Amy','John','Mike']

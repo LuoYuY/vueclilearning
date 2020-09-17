@@ -3,14 +3,14 @@
 <template>
   <div>
     <h1>{{ title }}</h1>
-
+    <LuoYuY></LuoYuY>
 <!--    <p>{{ greeting() }}</p>-->
 
   </div>
 </template>
 
 <script>
-import LuoYuY from "./LuoYuY";
+import LuoYuY from "./LuoYuY.vue";
 //  the component's name
 export default {
   components:{
@@ -22,10 +22,7 @@ export default {
     }
   },
   methods: {
-    // greeting:function () {
-    //   return 'HELLO :)';
-    //
-    // }
+
   }
 }
 </script>
