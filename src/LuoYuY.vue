@@ -1,20 +1,21 @@
 <template>
-<ul>
-  <li v-for="name in names">{{ name }}</li>
+  <div>
+    <h1>A name list:</h1>
+    <ul>
+      <li v-for="name in names">{{ name }}</li>
 
-  </li>
-</ul>
+    </ul>
+  </div>
 </template>
 
 <script>
-    export default {
-        // name: "LuoYuY"
-      data() {
-        return{
-          names:['Amy','John','Mike']
-        }
+  export default {
+    data() {
+      return {
+        names: ['Amy', 'John', 'Mike']
       }
     }
+  }
 </script>
 
 <style scoped>

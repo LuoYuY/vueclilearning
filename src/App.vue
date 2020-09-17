@@ -1,33 +1,50 @@
-//a vue file : a component ([component's name] and [html codes])
-//a vue file is just an extension of a component
-//App.vue is the root component
-
+<!-- prop: to output different data at each different time, pass down data as prop,
+a component with data-->
 <template>
   <div>
-    <h1>{{ title }}</h1>
-<!--    use 'LuoYuY' -->
-    <LuoYuY></LuoYuY>
-<!--    <p>{{ greeting() }}</p>-->
-
+<!--    use v-on:EventName to listen to the event-->
+<!--    use $event to get the data in the event -->
+    <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>
+    <!--    now 'users'has became a property-->
+    <app-lyy v-bind:users="users"></app-lyy>
+    <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
 
 <script>
 
-//  the component's name
-export default {
-  data () { // = data: function() {
-    return {
-      title:'LYY App'
+  import Header from "./Components/Header";
+  import Footer from "./Components/Footer";
+  import LuoYuYindex from "./Components/LuoYuYindex";
+
+  export default {
+    components: {
+      'app-header': Header,
+      'app-footer': Footer,
+      'app-lyy': LuoYuYindex
+    },
+    data() { // = data: function() {
+      return {
+        users: [
+          {name: 'Amy', age: 17, show: false},
+          {name: 'John', age: 12, show: false},
+          {name: 'Mike', age: 13, show: false},
+          {name: 'Clara', age: 15, show: false},
+          {name: 'Lucy', age: 16, show: false}
+
+        ],
+        title:'洛小侠'
+      }
+    },
+    methods: {
+      updateTitle:function (newTitle) {
+        this.title = newTitle;
+
+      }
     }
-  },
-  methods: {
   }
-}
 </script>
 
-
-//style controls this component
-<style>
+<style scoped>
 
 </style>
