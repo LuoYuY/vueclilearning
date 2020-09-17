@@ -1,7 +1,6 @@
 <template>
 <ul>
   <li v-for="name in names">{{ name }}</li>
-
 </ul>
 </template>
 
@@ -9,7 +8,7 @@
     export default {
       data() {
         return{
-          names:['Amy','John','Mike']
+          names:['Amy','John','Mike','Clara']
         }
       }
     }
