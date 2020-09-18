@@ -1,9 +1,11 @@
 import Vue from 'vue'
 //:'App' comes from App.vue
 import App from './App.vue'
+import VueResource from 'vue-resource'
 
 
-export const bus = new Vue(); //event bus
+//use 'vue-resource' plugin
+Vue.use(VueResource);
 new Vue({
   el: '#app',
 
