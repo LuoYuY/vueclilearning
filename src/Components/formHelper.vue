@@ -3,13 +3,13 @@
   <h1>Please fill out our form...</h1>
   <form>
     <div id="form-header">
-      <slot name="form-header"></slot>
+      <h1>Form1</h1>
     </div>
     <div id="form=fields">
-      <slot name="form-fields"></slot>
+      <input type="text" placeholder="username"/>
     </div>
     <div id="form-controls">
-      <slot name="form-controls"></slot>
+      <button v-on:click="">Submit</button>
     </div>
     <div id="useful-links">
       <ul>

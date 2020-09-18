@@ -3,62 +3,39 @@
 <!--life cycle hook: 在Vue对象被创建之前执行的函数-->
 <template>
   <div>
-<!--    use v-on:EventName to listen to the event-->
-<!--    use $event to get the data in the event -->
-<!--    <app-header v-bind:title="title" ></app-header>-->
-    <!--    now 'users'has became a property-->
-<!--    <app-lyy v-bind:users="users"></app-lyy>-->
-<!--    <app-footer v-bind:title="title"></app-footer>-->
-    <form-helper>
-      <div slot="form-header">
-        <h3>This is the title:</h3>
-        <p>information of the form</p>
-      </div>
-      <div slot="form-fields">
-        <input type="text" placeholder="name" required/>
-        <input type="text" placeholder="password" required/>
-      </div>
-      <div slot="form-controls">
-        <button v-on:click="handleSubmit">Submit</button>
-      </div>
+    <!--    'component' means I will put a component here-->
+    <!--    tell the 'component' which component I'd like to put-->
+    <!--    use the 'keep-alive' tag to keep the data inputted(avoid the component being destroyed  -->
+    <keep-alive>
+      <component v-bind:is="component"></component>
+    </keep-alive>
+    <button v-on:click="showOne">Show form one</button>
+    <button v-on:click="showTwo">Show form Two</button>
 
-    </form-helper>
   </div>
 </template>
 
 <script>
-
-  import Header from "./Components/Header";
-  import Footer from "./Components/Footer";
-  import LuoYuYindex from "./Components/LuoYuYindex";
   import formHelper from "./Components/formHelper";
+  import formTwo from "./Components/formtwo";
 
   export default {
     components: {
-      'app-header': Header,
-      'app-footer': Footer,
-      'app-lyy': LuoYuYindex,
-      'form-helper':formHelper
+      'form-one': formHelper,
+      'form-two': formTwo
     },
     data() { // = data: function() {
       return {
-        users: [
-          {name: 'Amy', age: 17, show: false},
-          {name: 'John', age: 12, show: false},
-          {name: 'Mike', age: 13, show: false},
-          {name: 'Clara', age: 15, show: false},
-          {name: 'Lucy', age: 16, show: false}
-
-        ],
-        title:'洛小侠'
+        component: 'form-two'
       }
     },
     methods: {
-      updateTitle:function (newTitle) {
-        this.title = newTitle;
-
+      showOne: function () {
+        this.component = 'form-one';
       },
-
+      showTwo: function () {
+        this.component = 'form-two';
+      }
     }
   }
 </script>
