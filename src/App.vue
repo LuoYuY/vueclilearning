@@ -1,13 +1,28 @@
-<!-- prop: to output different data at each different time, pass down data as prop,
-a component with data-->
+<!--life cycle hooks-->
+<!--hook: 钩子函数，类似拦截处理-->
+<!--life cycle hook: 在Vue对象被创建之前执行的函数-->
 <template>
   <div>
 <!--    use v-on:EventName to listen to the event-->
 <!--    use $event to get the data in the event -->
-    <app-header v-bind:title="title" ></app-header>
+<!--    <app-header v-bind:title="title" ></app-header>-->
     <!--    now 'users'has became a property-->
-    <app-lyy v-bind:users="users"></app-lyy>
-    <app-footer v-bind:title="title"></app-footer>
+<!--    <app-lyy v-bind:users="users"></app-lyy>-->
+<!--    <app-footer v-bind:title="title"></app-footer>-->
+    <form-helper>
+      <div slot="form-header">
+        <h3>This is the title:</h3>
+        <p>information of the form</p>
+      </div>
+      <div slot="form-fields">
+        <input type="text" placeholder="name" required/>
+        <input type="text" placeholder="password" required/>
+      </div>
+      <div slot="form-controls">
+        <button v-on:click="handleSubmit">Submit</button>
+      </div>
+
+    </form-helper>
   </div>
 </template>
 
@@ -16,12 +31,14 @@ a component with data-->
   import Header from "./Components/Header";
   import Footer from "./Components/Footer";
   import LuoYuYindex from "./Components/LuoYuYindex";
+  import formHelper from "./Components/formHelper";
 
   export default {
     components: {
       'app-header': Header,
       'app-footer': Footer,
-      'app-lyy': LuoYuYindex
+      'app-lyy': LuoYuYindex,
+      'form-helper':formHelper
     },
     data() { // = data: function() {
       return {
@@ -40,7 +57,8 @@ a component with data-->
       updateTitle:function (newTitle) {
         this.title = newTitle;
 
-      }
+      },
+
     }
   }
 </script>
