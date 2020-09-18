@@ -11,7 +11,6 @@
     </keep-alive>
     <button v-on:click="showOne">Show form one</button>
     <button v-on:click="showTwo">Show form Two</button>
-
   </div>
 </template>
 
