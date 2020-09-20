@@ -1,6 +1,6 @@
 <template>
   <div id="showBlogs">
-    <h1>All Blogs:</h1>
+    <h1>list Blogs:</h1>
     <div id="search">
       <input type="text" v-model="search" placeholder="search blogs"/>
 
@@ -8,7 +8,7 @@
     <div v-for="blog in filterBlogs" class="single-blog">
       <!--    v-rainbow: a custom directive-->
       <h2 v-rainbow>{{ blog.title | uppercase }}</h2>
-      <article>{{ blog.body | limit }}</article>
+
     </div>
   </div>
 </template>
