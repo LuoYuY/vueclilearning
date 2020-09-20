@@ -1,3 +1,5 @@
+<!--custom directives : 自定义指令 -->
+<!--directives: v-model,v-for,v-on,etc.-->
 <template>
   <div>
     <show-blog></show-blog>
