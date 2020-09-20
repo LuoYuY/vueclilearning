@@ -1,17 +1,21 @@
 <template>
   <header>
-    <h1 v-on:click="changeTitle">{{ title }}</h1>
+     <ul>
+       <li><router-link to="/" exact>Blog</router-link></li>
+       <li><router-link to="/add" exact>add Blog</router-link></li>
+     </ul>
   </header>
 </template>
 
 <script>
   import {bus} from '../main'
+  import LuoYuYindex from "./LuoYuYindex";
   export default {
+    components: {LuoYuYindex},
     props:{
       title:{
         type:String
       }
-
     },
 
     data() { // = data: function() {
@@ -24,7 +28,6 @@
        //emit event to the bus
         this.title = 'LuminousClara';
         bus.$emit('changeTitle','Clarabe');
-
       }
     }
   }
@@ -39,6 +42,5 @@
   h1 {
     color: #222;
     text-align: center;
-
   }
 </style>

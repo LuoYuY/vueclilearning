@@ -23,8 +23,6 @@
         <label>Author:</label>
         <select v-model="blog.author">
           <option v-for="author in authors">{{ author }}</option>
-
-
         </select>
       </div>
       <!--    To avoid the default behavior,add 'prevent' -->

@@ -2,8 +2,8 @@
 <!--directives: v-model,v-for,v-on,etc.-->
 <template>
   <div>
-    <show-blog></show-blog>
-    <list-blog></list-blog>
+    <app-header></app-header>
+    <router-view/>
   </div>
 </template>
 
@@ -11,11 +11,13 @@
   import addBlog from "./Components/addBlog";
   import showBlogs from "./Components/showBlogs";
   import listBlog from "./Components/listBlog";
+  import appHeader from "./Components/Header"
   export default {
     components: {
       'add-blog':addBlog,
       'show-blog':showBlogs,
-      'list-blog':listBlog
+      'list-blog':listBlog,
+      'app-header':appHeader
     },
     data() { // = data: function() {
       return {
